@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link CSS ( SASS ) -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Link Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./script.js" defer></script>
+  <title>To Do List</title>
+</head>
+<body>
+  <div class="container">
+    <div class="new-task-container">
+      <form>
+        <input type="text" class="new-task-input" placeholder="Qual a sua próxima tarefa?" autofocus id="input" autocomplete="off">
+        <button class="new-task-btn"><i class="fa fa-plus fa-xs" id="new-task-btn"></i></button>
+      </form>
+    </div>
+    <div class="tasks-container" id="tasks-container">
+      <ul class="tasks-list" id="tasks-list">
+      </ul>
+    </div>
+  </div>
+  <div class="confirm" id="confirm">
+    <div class="confirm-content" id="confirm-content">
+      <p class="confirm-text"></p>
+      <div class="btns">
+        <button class="yes-btn yes"><i class="fa fa-check yes"></i>
+        </button>
+        <button class="no-btn no"><i class="fa fa-close no"></i></button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>Developed by: Mateus Souza</span>
+    <img class="logo-img" src="./img/3.png" alt="ms-logo">
+  </footer>
+</body>
+</html>

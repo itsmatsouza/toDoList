@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include display-style(flex, space-between, center);
+  flex-direction: column;
+  width: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: rgb(255,0,0);
+  background: linear-gradient(159deg, rgba(255,0,0,1) 0%, rgba(0,117,255,1) 100%);
+  position: relative;
+}
+
+.container {
+  @include display-style(flex, center, center);
+  flex-direction: column;
+  background-color: rgba($color: #ffffff, $alpha: 0.4);
+  backdrop-filter: blur( 13.5px );
+  -webkit-backdrop-filter: blur( 13.5px );
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  width: auto;
+  min-width: 40em;
+  margin: 50px;
+}
+
+.new-task-container {
+  @include display-style(flex, center, center);
+  width: auto;
+  min-width: 100%;
+  padding: 50px;
+}
+
+.new-task-container form {
+  @include display-style(flex, center, center);
+  width: auto;
+  min-width: 100%;
+}
+
+.new-task-input {
+  @include text-style($fontColorDark, 2rem, 400);
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 12px;
+  width: 80%;
+  outline: none;
+  border-style: none;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+
+.new-task-input:focus {
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  border: 2px solid #fff;
+}
+
+.new-task-btn {
+  @include text-style($fontColorDark, 2rem, 400);
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 12px;
+  outline: none;
+  border-style: none;
+  width: 20%;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.new-task-btn:hover {
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  border: 2px solid #fff;
+}
+
+.tasks-container {
+  width: auto;
+  min-width: 100%;
+  padding: 0px 50px 35px 50px;
+} 
+
+.task-line {
+  @include display-style(flex, space-between, center);
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  list-style-type: none;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid transparent;
+  transition: 500ms;
+}
+
+.done {
+  background-color: rgba($color: #90EE90, $alpha: 0.7);
+  border: 2px solid #228B22;
+  text-decoration-style: none;
+  text-decoration: line-through;
+  color: $fontColorDark;
+}
+
+.task-text {
+  @include text-style($fontColorDark, 1.5rem, 400);
+}
+
+.icons {
+  @include display-style(flex, center, center);
+  gap: 8px;
+}
+
+#edit-btn, #remove-btn {
+  @include text-style($fontColorDark, 1.5rem, 400);
+  background-color: transparent;
+  outline: none;
+  border-style: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#edit-btn:hover, #remove-btn:hover {
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  border: 2px solid #fff;
+}
+
+#confirm {
+  @include display-style(none, center, center);
+  background-color: rgba($color: #333, $alpha: 0.5);
+  width: auto;
+  min-width: 200vw;
+  min-height: 100vh;
+  height: auto;
+  position: fixed;
+}
+
+.confirm-content {
+  @include display-style(flex, center, center);
+  flex-direction: column;
+  width: auto;
+  height: auto;
+}
+
+.confirm-text {
+  @include display-style(flex, center, center);
+  @include text-style($fontColorLight, 2rem, 600);
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.btns {
+  @include display-style(flex, center, center);
+  gap: 10px;
+  width: 100%;
+}
+.yes-btn, .no-btn {
+  @include text-style($fontColorDark, 1.5rem, 600);
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  border-style: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.yes-btn:hover, .no-btn:hover {
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
+  border: 2px solid #fff;
+}
+
+.new-task-input-confirm {
+  @include text-style($fontColorDark, 2rem, 400);
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  border-style: none;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  margin: 10px 0 10px 0;
+}
+
+.new-task-input-confirm:hover {
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  border: 2px solid #fff;
+}
+
+.footer {
+  @include display-style(flex, center, center);
+  justify-content: center;
+  align-content: stretch;
+  width: 100%;
+  height: auto;
+  margin: 1em;
+}
+.footer span{
+  @include text-style($fontColorDark, 1rem, 600);
+}
+
+.logo-img{
+  @include display-style(flex, center, center);
+  width: 2.5em;
+  height: auto;
+}
